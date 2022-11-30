@@ -13,7 +13,7 @@ app.get("/productos" , ( req , res) => {
 
 app.get("/productoRandom" , ( req , res) => {
     const generateRandomNumber = () => {
-        let number = Math.ceil(Math.random()*productos.length + 1);
+        let number = Math.floor(Math.random()*productos.length + 1);
         return number;
     }
     let number = generateRandomNumber();
